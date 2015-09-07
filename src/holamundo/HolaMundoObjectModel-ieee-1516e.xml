@@ -1,0 +1,30 @@
+<objectModel>
+  <objects>
+    <objectClass>
+      <name>HLAobjectRoot</name>
+      <objectClass>
+        <name>Programmer</name>
+        <attribute>
+          <name>WorkDone</name>
+          <transportation>HLAreliable</transportation>
+          <order>Receive</order>
+        </attribute>
+      </objectClass>
+    </objectClass>
+  </objects>
+  <interactions>
+    <interactionClass>
+      <name>HLAinteractionRoot</name>
+      <transportation>HLAreliable</transportation>
+      <order>Receive</order>
+      <interactionClass>
+        <name>InformInteraction</name>
+        <transportation>HLAreliable</transportation>
+        <order>Receive</order>
+        <parameter>
+          <name>InformInteractionMessageParamName</name>
+        </parameter>
+      </interactionClass>
+    </interactionClass>
+  </interactions>
+</objectModel>

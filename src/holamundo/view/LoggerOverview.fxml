@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="292.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="holamundo.view.LoggerOverviewController">
+   <children>
+      <TextArea fx:id="text" layoutY="66.0" prefHeight="226.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextArea>
+      <MenuButton layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="Federation...">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#handleCreateFederation" text="Start" />
+          <MenuItem mnemonicParsing="false" onAction="#handleDestroyFederation" text="End" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
