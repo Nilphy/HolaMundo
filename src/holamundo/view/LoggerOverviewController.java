@@ -19,8 +19,8 @@ public class LoggerOverviewController {
 	@FXML
 	private void initialize() {
 		this.text.setEditable(false);
-        this.text.setText("Log: \n");
-	}    
+		this.text.setText("Log: \n");
+	}
 	
     public void log(String message) {
     	this.text.appendText(message + "\n");
