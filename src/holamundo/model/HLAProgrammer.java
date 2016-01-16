@@ -92,7 +92,7 @@ public abstract class HLAProgrammer implements Runnable {
 		this.workDoneAttributeHandle = workDoneAttributeHandle;
 	}
 
-	public void reflectAttributeBalues(AttributeHandleValueMap attributeValues) {
+	public void reflectAttributeValues(AttributeHandleValueMap attributeValues) {
 		byte[] workDone = attributeValues.get(getWorkDoneAttributeHandle());
 		this.setWorkDone(decodeWorkDone(workDone));
 	}
