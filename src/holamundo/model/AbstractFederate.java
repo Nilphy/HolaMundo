@@ -50,18 +50,15 @@ public class AbstractFederate {
 		getRTIAmbassador().joinFederationExecution(federateName, MainApp.FEDERATION_NAME);
 		configureProgrammer();
 		configureInformInteraction();
-		new Thread() {
-			@Override
-			public void run() {
-				try {
-					while (true) {
-						getRTIAmbassador().evokeMultipleCallbacks(1, 1);
-					}
-				} catch (Throwable t) {
-					t.printStackTrace();
+		new Thread(() -> {
+			try {
+				while (true) {
+					getRTIAmbassador().evokeMultipleCallbacks(1, 1);
 				}
+			} catch (Throwable t) {
+				t.printStackTrace();
 			}
-		}.start();
+		}).start();
 	}
 	
 	protected void resignFromFederation() throws Exception {
